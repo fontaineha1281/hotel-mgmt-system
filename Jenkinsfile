@@ -14,11 +14,14 @@ pipeline {
             steps {
                 // Build your React project
                 sh 'npm i'
+                sh 'composer install'
             }
         }
-        stage('Serve') {
+        stage('Deploy') {
             steps {
-                sh 'serve -s build'
+                sh 'cd /var/lib/jenkins/workspace/Hotel/'
+                sh 'cp -r * /var/www/hotel/'
+                sh 'sudo systemctl reload nginx'
             }
         }
     }
