@@ -15,7 +15,7 @@ class DB
                 "host" => "localhost",
                 "port" => "3306",
                 "user" => "root",
-                "pass" => "",
+                "pass" => "Haduyanh1281$",
                 "name" => "hotel",
                 "charset" => "UTF-8"
             );
