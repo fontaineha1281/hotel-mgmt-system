@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/Hotel/'
-                sh 'cp -r * /var/www/hotel/'
+                sh 'sudo cp -r * /var/www/hotel/'
                 sh 'sudo systemctl reload nginx'
             }
         }
